@@ -106,7 +106,7 @@ export class DataFetcher {
         }
         if (includePrice) {
           const price: Price = {
-            fuelType: fuelType,
+            fueltype: fuelType,
             date: dateObj,
             price: okPrice.pris,
             prevPrices: prevPrices,

@@ -40,7 +40,7 @@ export function mapPrevPrice(prevPriceDto: PreviousPriceDto): PreviousPrice {
 }
 
 export interface Price {
-  fuelType: FuelType;
+  fueltype: FuelType;
   date: Date;
   price: number;
   prevPrices: PreviousPrice[];
@@ -54,7 +54,7 @@ export function mapPriceDto(price: Price): PriceDto {
   };
 }
 export interface PriceDto {
-  fuelType: FuelType;
+  fueltype: FuelType;
   date: string;
   price: number;
   prevPrices: string;

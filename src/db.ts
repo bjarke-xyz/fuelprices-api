@@ -98,7 +98,7 @@ export class PriceRepository {
 
     const statements: D1PreparedStatement[] = prices.map((price) => {
       const dto = mapPriceDto(price);
-      return stmt.bind(dto.fuelType, dto.date, dto.price, dto.prevPrices);
+      return stmt.bind(dto.fueltype, dto.date, dto.price, dto.prevPrices);
     });
     const resp = await this.db.batch(statements);
     if (resp.some((x) => x.error)) {
