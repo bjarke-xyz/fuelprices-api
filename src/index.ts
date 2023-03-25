@@ -10,7 +10,11 @@ export default {
     return h.fetch(request, env, ctx);
   },
 
-  async scheduled(env: Env): Promise<void> {
-    await scheduled(env);
+  async scheduled(
+    event: ScheduledEvent,
+    env: Env,
+    ctx: ExecutionContext
+  ): Promise<void> {
+    ctx.waitUntil(scheduled(env));
   },
 };
