@@ -10,4 +10,4 @@ database_name = "fuelprices_db"
 database_id = "34aa415c-25d3-4971-b46b-372ca2d7f0ba"
 
 [triggers]
-crons = ["*/30 10-16 * * *"]
+crons = ["*/5 10-16 * * *"]
