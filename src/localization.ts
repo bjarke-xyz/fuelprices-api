@@ -123,9 +123,9 @@ function priceToKronerAndOrer(price: Price): KronerAndOrerResponse {
     };
   }
   const kroner = kronerNumber.toFixed(0);
-  let orer = parts[1];
+  let orer = parts[1].trimStart();
   while (orer.startsWith("0")) {
-    orer = orer.substring(0, 1);
+    orer = orer.substring(1);
   }
   return {
     kroner,
